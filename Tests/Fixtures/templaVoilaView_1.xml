@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<T3FlexForms>
+    <data>
+        <sheet index="sDEF">
+            <language index="lDEF">
+                <field index="subtitle">
+                    <value index="vDEF">Gebrauchtes</value>
+                </field>
+                <field index="title">
+                    <value index="vDEF">Nautilus 802 für 1.999 €</value>
+                </field>
+                <field index="image">
+                    <value index="vDEF">bw-teaser-nautilus_01.jpg</value>
+                </field>
+                <field index="description">
+                    <value index="vDEF">&lt;b&gt;Nautilus 802 Kirsche in TOP Zustand!&lt;/b&gt;&lt;br /&gt;für 1.998 € /Stückpreis&lt;br /&gt;Farbe: Kirshce Natur&lt;br /&gt;Erstkauf: 08.2005</value>
+                </field>
+                <field index="link">
+                    <value index="vDEF">59</value>
+                </field>
+            </language>
+        </sheet>
+    </data>
+</T3FlexForms>
