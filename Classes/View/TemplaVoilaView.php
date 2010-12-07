@@ -40,6 +40,11 @@ class Tx_ExtbaseTemplavoila_View_TemplaVoilaView extends Tx_Extbase_MVC_View_Abs
 	public function __construct() {
 		$this->datastructureRepository = t3lib_div::makeInstance('tx_templavoila_datastructureRepository');
 		$this->templaVoila             = t3lib_div::makeInstance('tx_templavoila_pi1');
+		//Check if cObj exist
+		if( !$this->templaVoila->cObj instanceof tslib_cObj) {
+			$this->templaVoila->cObj = t3lib_div::makeInstance('tslib_cObj');
+		}
+		#die( var_dump($this->templaVoila->cObj));
 	}
 
 	/**
@@ -76,7 +81,7 @@ class Tx_ExtbaseTemplavoila_View_TemplaVoilaView extends Tx_Extbase_MVC_View_Abs
 		}
 
 		$flexFormTools = t3lib_div::makeInstance('t3lib_flexformtools');
-        return $flexFormTools->flexArray2xml($flexFormArray);
+		return $flexFormTools->flexArray2xml($flexFormArray);
 	}
 	
 	
@@ -86,6 +91,10 @@ class Tx_ExtbaseTemplavoila_View_TemplaVoilaView extends Tx_Extbase_MVC_View_Abs
 		if( !$this->dataStructure instanceof tx_templavoila_datastructure ) {
 			throw new Tx_ExtbaseTemplavoila_Exception_InvalidConfigurationException('The DS "' . $dsString . '" was not found', 1291300487 );
 		}
+	}
+	
+	public function setTemplateObject($templateObject) {
+		$this->templateObject = $templateObject;
 	}
 
 }
